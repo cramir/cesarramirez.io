@@ -6,9 +6,12 @@ import Layout from "../components/layout"
 
 export default (props) => (
     <Layout>
-        <h1>welcome</h1>
+        <h1>Welcome</h1>
         <p>
             I'm a web developer, real estate investor, and security enthusiast.
+        </p>
+        <p>
+            I tend to keep my personal projects rather minimalistic. Over time I'll add a few here.
         </p>
     </Layout>
 )
