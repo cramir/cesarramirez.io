@@ -12,6 +12,13 @@ module.exports = {
                 path: `${__dirname}/src/`,
             },
         },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "assets",
+                path: `${__dirname}/static/`
+            }
+        },
         `gatsby-transformer-remark`,
         `gatsby-plugin-emotion`,
         `gatsby-plugin-sitemap`,

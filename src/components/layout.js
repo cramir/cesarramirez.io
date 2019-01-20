@@ -28,7 +28,7 @@ export default ({children}) => (
           padding-top: ${rhythm(1.5)};
         `}
             >
-                <Link to={`/`}>
+                <nav><Link to={`/`}>
                     <h3
                         css={css`
               margin-bottom: ${rhythm(2)};
@@ -39,19 +39,19 @@ export default ({children}) => (
                         {data.site.siteMetadata.title}
                     </h3>
                 </Link>
-                <Link
-                    to={`/contact/`}
-                    css={navLinkStyle}
-                >
-                    Contact
-                </Link>
-                <Link
-                    to={`/blog/`}
-                    css={navLinkStyle}
-                >
-                    Blog
-                </Link>
-                {children}
+                    <Link
+                        to={`/contact/`}
+                        css={navLinkStyle}
+                    >
+                        Contact
+                    </Link>
+                    <Link
+                        to={`/blog/`}
+                        css={navLinkStyle}
+                    >
+                        Blog
+                    </Link></nav>
+                <main>{children}</main>
             </div>
         )}
     />
