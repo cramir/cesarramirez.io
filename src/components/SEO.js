@@ -21,11 +21,12 @@ const SEO = ({ title, description, image, pathname, article }) => (
                 description: description || defaultDescription,
                 image: `${siteUrl}${image || defaultImage}`,
                 siteUrl: `${siteUrl}${pathname || "/"}`,
-            }
+            };
+            console.log('seo: ', seo);
 
             return (
                 <>
-                    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+                    <Helmet title={seo.title}>
                         <meta name="description" content={seo.description} />
                         <meta name="image" content={seo.image} />
                         {seo.siteUrl && <meta property="og:url" content={seo.siteUrl} />}
@@ -38,9 +39,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
                         )}
                         {seo.image && <meta property="og:image" content={seo.image} />}
                         <meta name="twitter:card" content="summary_large_image" />
-                        {twitterUsername && (
-                            <meta name="twitter:creator" content={twitterUsername} />
-                        )}
+                        <meta name="twitter:creator" content={'twitterUsername'} />
                         {seo.title && <meta name="twitter:title" content={seo.title} />}
                         {seo.description && (
                             <meta name="twitter:description" content={seo.description} />
@@ -78,6 +77,7 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         siteUrl: siteUrl
+        defaultImage: image
       }
     }
   }
