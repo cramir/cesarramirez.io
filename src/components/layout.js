@@ -1,15 +1,22 @@
-import React from "react"
-import {css} from "@emotion/core"
-import {StaticQuery, Link, graphql} from "gatsby"
+import React from 'react'
+import { css } from '@emotion/core'
+import { StaticQuery, Link, graphql } from 'gatsby'
 
-import {rhythm} from "../utils/typography"
+import { rhythm } from '../utils/typography'
 
-const navLinkStyle = css`margin: 0px 10px;
-            float: right;`;
+const navLinkStyle = css`
+  margin: 0px 10px;
+`
 
-export default ({children}) => (
-    <StaticQuery
-        query={graphql`
+const navLinkBar = css`
+  display: flex;
+  justify-content: flex-end;
+  padding-top: ${rhythm(0.2)};
+`
+
+export default ({ children }) => (
+  <StaticQuery
+    query={graphql`
       query {
         site {
           siteMetadata {
@@ -17,42 +24,53 @@ export default ({children}) => (
           }
         }
       }
-    `
-        }
-        render={data => (
-            <div
-                css={css`
+    `}
+    render={data => (
+      <div
+        css={css`
           margin: 0 auto;
-          max-width: 1200px;
+          max-width: 1024px;
           padding: ${rhythm(2)};
           padding-top: ${rhythm(1.5)};
         `}
+      >
+        <nav
+          css={css`
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: ${rhythm(1)};
+          `}
+        >
+          <Link to="/">
+            <h3
+              css={css`
+                display: inline-block;
+                font-style: normal;
+              `}
             >
-                <nav><Link to={`/`}>
-                    <h3
-                        css={css`
-              margin-bottom: ${rhythm(2)};
-              display: inline-block;
-              font-style: normal;
-            `}
-                    >
-                        {data.site.siteMetadata.title}
-                    </h3>
-                </Link>
-                    <Link
-                        to={`/contact/`}
-                        css={navLinkStyle}
-                    >
-                        Contact
-                    </Link>
-                    <Link
-                        to={`/blog/`}
-                        css={navLinkStyle}
-                    >
-                        Blog
-                    </Link></nav>
-                <main>{children}</main>
-            </div>
-        )}
-    />
+              {data.site.siteMetadata.title}
+            </h3>
+          </Link>
+          <div css={navLinkBar}>
+            <Link to="/resume/" css={navLinkStyle}>
+              Resume
+            </Link>
+            <Link to="/projects/" css={navLinkStyle}>
+              Projects
+            </Link>
+            <Link to="/realestate-investing/" css={navLinkStyle}>
+              Real Estate Investing
+            </Link>
+            <Link to="/thoughts/" css={navLinkStyle}>
+              Thoughts
+            </Link>
+            <Link to="/contact/" css={navLinkStyle}>
+              Contact
+            </Link>
+          </div>
+        </nav>
+        <main>{children}</main>
+      </div>
+    )}
+  />
 )
