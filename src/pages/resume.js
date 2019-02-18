@@ -8,7 +8,9 @@ export default () => (
     <h1>Resume</h1>
     <div>PDF version of resume below.</div>
     <div>
-      <a href="https://drive.google.com/file/d/1LTybTphdKVcoSKYqe5NV2MWXf4PdGLvm/view?usp=sharing">Resume</a>
+      <a href="https://docs.google.com/document/d/1IzAt3ROXE2otzdOSHWIpvt0pyhxrGuOt4whdgekWkTQ/edit?usp=sharing">
+        Resume
+      </a>
     </div>
   </Layout>
 )
