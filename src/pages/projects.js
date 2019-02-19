@@ -11,7 +11,7 @@ export default () => (
       Currently I'm investing in several real estate projects through Ramirez Boyle Properties. I am also working on a
       few Web projects
     </p>
-    <p>in the mean time here are some proejcts i've worked on</p>
+    <p>In the mean time here are some projects I've worked on</p>
     <ul>
       <li>
         <a href="https://ramirezwrites.com">ramirezwrites.com</a>

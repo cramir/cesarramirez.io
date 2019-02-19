@@ -46,8 +46,10 @@ export default props => (
           columns: 3;
         `}
       >
-        <li>Wealth Can't wait</li>
+        <li>Wealth Can't Wait</li>
+        <li>Digital Minimalism</li>
         <li>Deep Work</li>
+        <li>So Good They Can't Ignore You</li>
         <li>Rich Dad, Poor Dad</li>
         <li>The Definitive Book of Body Language</li>
         <li>Atomic Habits</li>
