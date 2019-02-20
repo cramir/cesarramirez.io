@@ -11,7 +11,7 @@ export default props => (
     <h1>Hi, I'm Cesar.</h1>
     <p>
       I’m an AWS-certified software engineer with 8 years of experience across frontend and backend development,
-      application security and the software development lifecycle. View my resume
+      application security and the software development lifecycle.
     </p>
     <p>I tend to keep my personal projects rather minimalistic. Over time I'll add a few here.</p>
     <div>
