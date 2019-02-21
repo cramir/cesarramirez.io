@@ -37,7 +37,7 @@ export default props => (
         perspective on self development, personal finance and entrepreneurship. I hope you enjoy them, too.
       </p>
       <p>
-        Drop me a line <a href="mailto:c.ramirezx@programmer.net">c.ramirez@programmer.net</a> with a podcast or book
+        Drop me a line <a href="mailto:c.ramirez@programmer.net">c.ramirez@programmer.net</a> with a podcast or book
         that you would recommend to me.
       </p>
       <h4>Books</h4>
@@ -64,7 +64,7 @@ export default props => (
         <li>The 10x Rule</li>
         <li>Long Distance Realestate Investing</li>
       </ul>
-      <h4>Podcast</h4>
+      <h4>Podcasts</h4>
       <ul
         css={css`
           columns: 3;
