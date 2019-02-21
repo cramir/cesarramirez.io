@@ -46,23 +46,60 @@ export default props => (
           columns: 3;
         `}
       >
-        <li>Wealth Can't Wait</li>
-        <li>Digital Minimalism</li>
-        <li>Deep Work</li>
-        <li>So Good They Can't Ignore You</li>
-        <li>Rich Dad, Poor Dad</li>
-        <li>The Definitive Book of Body Language</li>
-        <li>Atomic Habits</li>
-        <li>The One Thing</li>
-        <li>The Third Door</li>
-        <li>Giftology</li>
-        <li>Thinking in Bets</li>
-        <li>Never Split the Difference</li>
-        <li>The Richest Man in Babylon</li>
-        <li>Miracle Morning</li>
-        <li>The Entrepreneur Roller Coaster</li>
-        <li>The 10x Rule</li>
-        <li>Long Distance Realestate Investing</li>
+        <li>
+          <a href="https://amzn.to/2EoWuuJ">Wealth Can't Wait</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2BNnr9p">Digital Minimalism</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2BKXwPY">Deep Work</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2E6BHue">So Good They Can't Ignore You</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2EocEo8">Rich Dad, Poor Dad</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2EmynN4">The Definitive Book of Body Language</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2Iu5UZX">Atomic Habits</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2ElNpCx">The One Thing</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2BJmEGE">The Third Door</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2V9ZcJN">Giftology</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2U1xHCa">Thinking in Bets</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2VbKLFc">Never Split the Difference</a>
+        </li>
+        <li>
+          <a href="ttps://amzn.to/2EoZC9J">The Richest Man in Babylon</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2EoXnDz">Miracle Morning</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2twxzil">The Entrepreneur Roller Coaster</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2txeYTe">The 10x Rule</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2T4ViVs">Long-Distance Real Estate Investing</a>
+        </li>
+        <li>
+          <a href="https://amzn.to/2tuPGoS">Set for Life</a>
+        </li>
       </ul>
       <h4>Podcasts</h4>
       <ul
@@ -70,15 +107,33 @@ export default props => (
           columns: 3;
         `}
       >
-        <li>Side Hustle School</li>
-        <li>Optimal Living Daily</li>
-        <li>Optimal Business Daily</li>
-        <li>Optimal Finance Daily</li>
-        <li>Bigger Pockets</li>
-        <li>Bigger Pockers Money</li>
-        <li>Masters of Scale</li>
-        <li>ChooseFI</li>
-        <li>Afford Anything</li>
+        <li>
+          <a href="https://sidehustleschool.com/podcasts/">Side Hustle School</a>
+        </li>
+        <li>
+          <a href="https://oldpodcast.com/episodes/">Optimal Living Daily</a>
+        </li>
+        <li>
+          <a href="https://oldpodcast.com/episodes/">Optimal Business Daily</a>
+        </li>
+        <li>
+          <a href="https://oldpodcast.com/episodes/">Optimal Finance Daily</a>
+        </li>
+        <li>
+          <a href="https://www.biggerpockets.com/podcast">Bigger Pockets</a>
+        </li>
+        <li>
+          <a href="https://www.biggerpockets.com/moneyshow">Bigger Pockets Money</a>
+        </li>
+        <li>
+          <a href="https://mastersofscale.com/#/">Masters of Scale</a>
+        </li>
+        <li>
+          <a href="https://www.choosefi.com/podcast-episodes/">ChooseFI</a>
+        </li>
+        <li>
+          <a href="https://affordanything.com/podcast/">Afford Anything</a>
+        </li>
       </ul>
     </div>
   </Layout>

@@ -52,6 +52,9 @@ export default ({ children }) => (
             </h3>
           </Link>
           <div css={navLinkBar}>
+            <Link to="/" css={navLinkStyle}>
+              Home
+            </Link>
             <Link to="/resume/" css={navLinkStyle}>
               Resume
             </Link>
