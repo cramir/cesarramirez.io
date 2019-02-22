@@ -37,8 +37,7 @@ export default props => (
         perspective on self development, personal finance and entrepreneurship. I hope you enjoy them, too.
       </p>
       <p>
-        Drop me a line <a href="mailto:c.ramirez@programmer.net">c.ramirez@programmer.net</a> with a podcast or book
-        that you would recommend to me.
+        Drop me a line <a href="mailto:c.ramirez@programmer.net">c.ramirez@programmer.net</a> with a podcast or book recommendation.
       </p>
       <h4>Books</h4>
       <ul
