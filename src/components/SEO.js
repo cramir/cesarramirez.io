@@ -17,7 +17,6 @@ const SEO = ({ title, description, image, pathname, article }) => (
         image: `${siteUrl}${image || defaultImage}`,
         siteUrl: `${siteUrl}${pathname || '/'}`,
       }
-      console.log('seo: ', seo)
 
       return (
         <>

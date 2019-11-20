@@ -71,13 +71,13 @@ const contact = () => {
         {submittedState &&
           (successfulSub
             ? 'Submission was successful'
-            : 'An unkonwn error has occured. Please write an email to c.ramirez@programmer.net ')}
+            : 'An error has occurred. Please write an email to c.ramirez@programmer.net ')}
       </div>
 
       <Formik
         initialValues={{ email: '', name: '', message: '' }}
-        onSubmit={async (values, { setSubmitting, resetForm }) => {
-          const res = await axios({
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          axios({
             headers: {
               Accept: 'application/json',
               'Content-Type': 'application/json',
@@ -90,12 +90,16 @@ const contact = () => {
               message: values.message,
             },
           })
-          if (res.status === 204) {
-            setSuccess(true)
-            resetForm()
-          }
-          setSubmitted(true)
-          setSubmitting(false)
+            .then(() => {
+              setSubmitted(true)
+              setSubmitting(false)
+              setSuccess(true)
+              resetForm()
+            })
+            .catch(() => {
+              setSubmitted(true)
+              setSubmitting(false)
+            })
         }}
         validationSchema={Yup.object().shape({
           name: Yup.string()
