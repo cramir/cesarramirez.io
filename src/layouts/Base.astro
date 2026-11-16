@@ -1,0 +1,62 @@
+---
+interface Props { title?: string; description?: string; }
+const { title, description = 'Cesar Ramirez — SOC infrastructure engineer. Security operations, DevSecOps economics, cloud cost engineering.' } = Astro.props;
+const siteName = 'cramir.com';
+const pageTitle = title ? title + ' · ' + siteName : siteName + ' — Cesar Ramirez';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
+  <style is:global>
+    :root { color-scheme: dark; --bg:#0e1014; --panel:#15181f; --text:#e8eaf0; --dim:#9aa3b2; --accent:#7aa2f7; --border:#232833; --max:44rem; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,'Segoe UI',sans-serif; }
+    a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+    header.site { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid var(--border); }
+    header.site .mark { font-weight:700; color:var(--text); letter-spacing:-.02em; }
+    header.site nav { display:flex; gap:1.1rem; font-size:.95rem; }
+    header.site nav a { color:var(--dim); } header.site nav a:hover { color:var(--text); text-decoration:none; }
+    main { max-width:var(--max); margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    footer.site { border-top:1px solid var(--border); padding:1.5rem 1.25rem; color:var(--dim); font-size:.85rem; display:flex; justify-content:space-between; }
+    h1 { font-size:1.9rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 1rem; }
+    h2 { font-size:1.35rem; letter-spacing:-.01em; margin-top:2.2rem; }
+    h3 { font-size:1.1rem; margin-top:1.8rem; }
+    .dim { color:var(--dim); }
+    .meta { font-size:.85rem; color:var(--dim); font-family:ui-monospace,monospace; }
+    article.post { line-height:1.75; }
+    article.post pre { background:var(--panel); border:1px solid var(--border); border-radius:.5rem; padding:1rem; overflow:auto; font-size:.85rem; }
+    article.post code { font-family:ui-monospace,monospace; font-size:.9em; }
+    article.post p code, article.post li code { background:var(--panel); border:1px solid var(--border); border-radius:.3rem; padding:.05rem .35rem; }
+    article.post img { max-width:100%; border-radius:.5rem; }
+    article.post blockquote { border-left:3px solid var(--accent); margin:1.5rem 0; padding:.2rem 1rem; color:var(--dim); }
+    ul.posts { list-style:none; padding:0; margin:0; }
+    ul.posts li { border:1px solid var(--border); border-radius:.7rem; padding:1rem 1.2rem; margin-bottom:.8rem; background:var(--panel); }
+    ul.posts a.title { color:var(--text); font-weight:600; font-size:1.05rem; } ul.posts a.title:hover { color:var(--accent); text-decoration:none; }
+    .hero { padding:2.5rem 0 1rem; } .hero h1 { font-size:2.3rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(15rem,1fr)); gap:.8rem; }
+    .card { border:1px solid var(--border); border-radius:.7rem; padding:1rem 1.2rem; background:var(--panel); }
+    .card h3 { margin:0 0 .4rem; font-size:1rem; }
+    .card p { margin:0; font-size:.88rem; color:var(--dim); }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <a class="mark" href="/">cramir.com</a>
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/projects">Projects</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <main><slot /></main>
+  <footer class="site">
+    <span>Cesar Ramirez</span>
+    <span><a href="/rss.xml">RSS</a> · <a href="https://github.com/cramir" rel="me">GitHub</a> · <a href="https://www.linkedin.com/" rel="me">LinkedIn</a></span>
+  </footer>
+</body>
+</html>
