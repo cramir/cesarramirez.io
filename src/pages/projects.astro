@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+const projects = [
+  { name: 'soc-playbooks', url: 'https://github.com/cramir/soc-playbooks', desc: 'Operational playbooks for security operations teams.' },
+  { name: 'soc-policy-library', url: 'https://github.com/cramir/soc-policy-library', desc: 'Open Policy Agent patterns — guardrails without blocking shipping.' },
+  { name: 'costnimbus', url: 'https://github.com/cramir/costnimbus', desc: 'Cloud cost tooling.' },
+  { name: 'soc-comparison', url: 'https://github.com/cramir/soc-comparison', desc: 'Comparing SOC tooling and approaches.' },
+];
+---
+<Base title="Projects">
+  <h1>Projects</h1>
+  <div class="cards">
+    {projects.map((p) => (
+      <div class="card">
+        <h3><a href={p.url}>{p.name}</a></h3>
+        <p>{p.desc}</p>
+      </div>
+    ))}
+    <div class="card"><h3>Directory app</h3><p>In progress.</p></div>
+  </div>
+  <p class="dim" style="margin-top:2rem">Everything public lives on <a href="https://github.com/cramir">GitHub</a>.</p>
+</Base>
